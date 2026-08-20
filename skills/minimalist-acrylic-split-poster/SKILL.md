@@ -27,7 +27,7 @@ description: "Convert every supplied reference photo into its own premium 3:4 sp
 
 ### B. 几何建筑编辑海报
 
-用户要求几何抽象、扁平色块、轮廓结构、建筑海报、艺术展览或高级品牌视觉时，完整读取 [references/geometric-architectural-prompt.md](references/geometric-architectural-prompt.md)。
+用户要求几何抽象、扁平色块、细线构成、抽象圆环、大面积留白、主体居中、建筑海报、艺术展览或高级品牌视觉时，完整读取 [references/geometric-architectural-prompt.md](references/geometric-architectural-prompt.md)。此档案只控制下半区，不把上半原图规则写入 ImageGen 提示词。
 
 ### C. 建筑拼贴丝网印刷
 
