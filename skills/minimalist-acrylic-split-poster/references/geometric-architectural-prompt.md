@@ -1,6 +1,6 @@
 # LAKESIDE TERRAIN｜高级极简几何编辑海报风格档案
 
-把当前照片作为唯一主体参考，只生成下半区所需的一张独立横向 3:2 无文字艺术素材。不要生成上半原照、双联版式、标题、字母、数字、边框、水印或多图拼贴。上半区由代码直接使用真实原照，不交给 ImageGen 重绘。
+本档案是完整 3:4 双联海报的下半风格模块。只控制下半艺术区，不改变共享提示词中的上半照片保真规则。下半重新诠释同一主体，并与上半形成视觉呼应。
 
 ## 场景摘要
 
@@ -35,7 +35,7 @@
 
 可选加入少量水平线、纵向构成线、细网格、简化矩形、抽象圆弧或环形。辅助图形必须从主体的结构、方向或色彩中派生，数量少、对比低、不抢主体。若原场景包含水面、重复建筑节奏或竖向延展，可以加入向下变淡、断开的平面形状；否则不必加入镜像或渐隐碎片。
 
-为代码文字层保留一块安静的浅色区域。具体位置根据当前构图选择：可使用底部居中页脚，也可使用左上标题与右上年份。标题、编号和年份由代码准确绘制；ImageGen 素材中不要模拟文字。
+为海报文字保留一块安静的浅色区域。具体位置根据当前构图选择：可使用底部居中区域，也可使用左上标题与右上年份。只生成共享提示词中明确给出的短标题、编号和年份，不生成其他假字或标志。
 
 ## 配色
 
@@ -55,6 +55,6 @@ LAKESIDE TERRAIN, premium minimalist geometric editorial poster, architectural a
 
 ## 强制避免
 
-Avoid photorealistic illustration, photo filter, automatic vector tracing, equal-scale vector copy of the photograph, detailed tracing, tile-by-tile roof reconstruction, dense object details, complex windows, realistic foliage, ordinary vector clip-art, corporate icon look, cheap flat-design look, architectural rendering, large colored background coverage, subject filling the canvas, cartoon, anime, gaming aesthetic, cyberpunk, glossy 3D, dramatic cinematic lighting, gradient-heavy digital rendering, neon colors, thick outlines, random decorative geometry, busy technical blueprint, acrylic storybook painting, transparent watercolor, naive hand-drawn illustration, architectural photo collage, photographic fragments, halftone photo textures, heavy screen-print grain, template look, stock-poster look, text, letters, numbers, logos, watermark, borders, split-screen, multiple scenes.
+Avoid photorealistic lower illustration, photo filter, automatic vector tracing, equal-scale vector copy of the photograph, detailed tracing, tile-by-tile roof reconstruction, dense object details, complex windows, realistic foliage, ordinary vector clip-art, corporate icon look, cheap flat-design look, architectural rendering, large colored background coverage, subject filling the lower panel, cartoon, anime, gaming aesthetic, cyberpunk, glossy 3D, dramatic cinematic lighting, gradient-heavy digital rendering, neon colors, thick outlines, random decorative geometry, busy technical blueprint, acrylic storybook painting, transparent watercolor, naive hand-drawn illustration, architectural photo collage, photographic fragments, halftone photo textures, heavy screen-print grain, template look, stock-poster look, unrequested text, fake logos, watermark, accidental borders, multiple lower scenes.
 
 最重要的规则：先保留能够识别原主体和原场景含义的最少轮廓与结构，再把这些信息重组为具有独立艺术判断的结构研究。宁可删掉装饰并留下未完成感，也不要把原照片逐层描成扁平矢量图。不要把任何单张参考海报的配色、镜像、矩形或排版当成每张图都必须复制的固定模板。

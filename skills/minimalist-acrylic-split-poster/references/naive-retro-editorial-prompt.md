@@ -1,6 +1,6 @@
 # 复古稚拙手绘编辑插画风格档案
 
-把当前照片作为唯一主体参考，生成一张独立横向 3:2 的无文字下半区艺术素材。不要生成上半照片、双联版式、标题、字母、数字、标志、边框或水印；标题与元信息由代码准确绘制。
+本档案是完整 3:4 双联海报的下半风格模块。只在下半区域把上半照片中的同一主体重新解释为复古稚拙手绘编辑插画，不改变上半照片。
 
 ## 场景摘要
 
@@ -24,9 +24,9 @@
 
 使用米白或浅色纸张背景和大面积留白。主体集中在画面中央、中下部或依据原照片自然偏向一侧，边缘保持开放。只用少量松散淡彩、斜线、圆点、色块或简单包豪斯几何元素承托主体。
 
-在左上方保留约 38% 宽、20% 高的相对安静区域，供代码添加手写主标题、关键词或适配金句；右上方保留较小区域放置年份；左下或右下保留少量纸张区域放置编号和辅助文字。不要让高对比主体穿过这些文字安全区。
+在下半区域左上方保留约 38% 宽、20% 高的相对安静区域，供共享提示词添加手写主标题、关键词或适配金句；右上方保留较小区域放置年份；左下或右下保留少量纸张区域放置编号和辅助文字。不要让高对比主体穿过这些文字安全区。
 
-文字不由 ImageGen 生成。素材中禁止出现假字、可读字母、数字或伪标志。
+只生成共享提示词明确指定的短文字。禁止添加假字、无关字母、额外数字或伪标志。
 
 ## 配色
 
@@ -36,7 +36,7 @@
 
 ## 文字协作规则
 
-根据照片的地点、人物、动作、情绪或主题提炼 1–4 个英文单词标题，或一句非常短的适配金句。代码使用 `naive-editorial` 布局，把主标题绘制成带轻微错位、叠色和旧套印感的手写艺术字；辅助文字使用克制温和的无衬线或衬线字体。
+根据照片的地点、人物、动作、情绪或主题提炼 1–4 个英文单词标题，或一句非常短的适配金句。把主标题生成成带轻微错位、叠色和旧套印感的手写艺术字；辅助文字使用克制温和的无衬线或衬线字体。
 
 文字应像插画的一部分自然生长，而不是覆盖主体的商业排版。若无法提炼有意义的文字，使用中性的地点、动作或场景词，不编造品牌、机构和宣传口号。
 
@@ -52,6 +52,6 @@ naive retro editorial illustration, modernist magazine illustration, Bauhaus gra
 
 ## 强制避免
 
-Avoid photorealistic lower illustration, literal tracing, ordinary photo filter, detailed facial rendering, dense background reconstruction, excessive props, polished vector art, perfect geometric icons, smooth digital gradients, airbrush, glossy surfaces, realistic cinematic lighting, 3D rendering, anime, kawaii cartoon, generic children's clipart, corporate flat illustration, generic template, neon colors, oversaturation, heavy black outlines, fake readable text, letters, numbers, logos, watermark, border, split-screen, multiple scenes.
+Avoid photorealistic lower illustration, literal tracing, ordinary photo filter, detailed facial rendering, dense background reconstruction, excessive props, polished vector art, perfect geometric icons, smooth digital gradients, airbrush, glossy surfaces, realistic cinematic lighting, 3D rendering, anime, kawaii cartoon, generic children's clipart, corporate flat illustration, generic template, neon colors, oversaturation, heavy black outlines, unrequested fake text, fake logos, watermark, accidental border, multiple lower scenes.
 
 最重要的规则：保持主体身份、姿态、情绪和叙事关系一眼可辨，同时用主动删减、适度夸张、手工误差、有限色盘与幽默隐喻，把照片重新组织成成熟而时髦的复古稚拙编辑插画。

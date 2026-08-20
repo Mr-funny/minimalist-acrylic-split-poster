@@ -1,6 +1,6 @@
 # 单色建筑蚀刻版画风格档案
 
-把当前照片作为唯一主体参考，只生成下半区所需的一张独立横向 3:2 无文字艺术素材。不要生成上半原照、双联版式、标题、字母、数字、边框、水印或多图拼贴。上半区由代码直接使用真实原照。
+本档案是完整 3:4 双联海报的下半风格模块。只在下半区域把上半照片中的同一场景重构为单色建筑蚀刻版画，不改变上半照片。
 
 ## 场景摘要
 
@@ -16,7 +16,7 @@
 
 ## 构图与留白
 
-背景使用温暖象牙色、淡奶油色或轻微旧纸色的天然纸张。主体集中在画面中下部和底部，可横向延展，但不填满整张纸。保留大面积安静的上方留白，供代码在左上放置标题和编号、右上放置年份。
+背景使用温暖象牙色、淡奶油色或轻微旧纸色的天然纸张。主体集中在下半区域中下部和底部，可横向延展，但不填满整张纸。保留大面积安静的上方留白，供共享提示词在左上放置标题和编号、右上放置年份。
 
 主体外缘不要形成生硬的矩形裁切。让山体、树林、天空、水面和画面两侧通过逐渐变稀的点描、线刻与纸纹自然消失。未印刷的纸张直接代表雾气、天空、距离和水面反光。
 
@@ -40,6 +40,6 @@ monochrome architectural etching, copperplate engraving, intaglio print, stipple
 
 ## 强制避免
 
-Avoid watercolor washes, colored watercolor sketch, acrylic paint, gouache blocks, oil painting, multicolor palette, photographic texture fragments, photo collage, halftone screen-print collage, CAD blueprint, rigid technical drawing, vector line art, comic ink, manga, anime, cartoon, children's illustration, heavy black outlines, full-page dense coverage, hard rectangular image edges, glossy digital gradients, photorealistic rendering, cinematic lighting, 3D, cyberpunk, neon, fake text, letters, numbers, logos, borders, watermark, split-screen, multiple scenes.
+Avoid watercolor washes, colored watercolor sketch, acrylic paint, gouache blocks, oil painting, multicolor palette, photographic texture fragments, photo collage, halftone screen-print collage, CAD blueprint, rigid technical drawing, vector line art, comic ink, manga, anime, cartoon, children's illustration, heavy black outlines, full lower-panel dense coverage, hard rectangular image edges, glossy digital gradients, photorealistic lower rendering, cinematic lighting, 3D, cyberpunk, neon, unrequested fake text, fake logos, accidental borders, watermark, multiple lower scenes.
 
 最重要的规则：用单色蚀刻线、交叉排线和点描准确保留原场景，再让山林、雾、水面和画面边缘逐渐消失进温暖纸张。不要用水彩、彩色拼贴或 CAD 蓝图代替手工蚀刻版画的线条密度和印刷质感。

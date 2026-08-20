@@ -1,6 +1,6 @@
 # 旅行记忆水彩手记风格档案
 
-把当前照片作为唯一主体参考，生成一张独立横向 3:2 的无文字下半区艺术素材。不要生成上半照片、标题、字母、数字、标志、边框、水印或照片缩略图；左下原照索引图由代码加入。
+本档案是完整 3:4 双联海报的下半风格模块。只在下半区域把上半照片中的同一场景重构为旅行记忆水彩手记，不改变上半照片。可在下半局部加入一张克制的原照索引小图，但不要重复或改变主要主体。
 
 ## 场景摘要
 
@@ -14,11 +14,11 @@
 
 这不是儿童绘本，也不是甜美日系卡通。线条应敏感、节制、略带建筑或服装速写的观察精度；水彩应低饱和、透明分层、边缘自然，但不要整张大面积湿画晕染。
 
-## 构图与代码安全区
+## 构图与文字安全区
 
-主插画集中在画面的右侧约 60–68%，可略微跨入中部。左侧约 30–34% 保持大面积象牙色留白，供代码排布展览标签、标题、中文副标题、编号和纵排 `FIELD NOTE`。
+主插画集中在下半区域的右侧约 60–68%，可略微跨入中部。左侧约 30–34% 保持大面积象牙色留白，用于共享提示词指定的展览标签、标题、中文副标题、编号和纵排 `FIELD NOTE`。
 
-左下区域不要放重要主体，因为代码会嵌入一张带极细边框的原照片索引图。右下保持少量安静留白，供 `MEMORY ARCHIVE` 和编号。不要自行绘制照片框、文字框或假文字。
+左下区域不要放重要主体，可嵌入一张带极细边框的原照片索引图。右下保持少量安静留白，供 `MEMORY ARCHIVE` 和编号。不要添加多余照片框、文字框或假文字。
 
 主画可以采用不对称构图：观察者视角、背影、伸手引导、沿路前行、仰望建筑、面向水面等动作尤其适合；若原图没有人物，禁止凭空添加人物，用原照片主体建立同样的“正在观察与记录”感。
 
@@ -32,7 +32,7 @@
 
 参考独立旅行杂志、现代艺术展览册、田野调查笔记、建筑与自然观察档案。整体安静、亲密、诗意、成熟、具有行走与回忆的时间感。
 
-远看是大片留白和明确主角，近看能看到铅笔线、淡水彩、局部擦写、纸张纹理与未完成边缘。版式感由后续代码文字和原照小图完成，生成素材本身保持纯净。
+远看是大片留白和明确主角，近看能看到铅笔线、淡水彩、局部擦写、纸张纹理与未完成边缘。少量文字和原照索引小图应与插画自然融合，保持纯净克制。
 
 ## Style keywords
 
@@ -40,6 +40,6 @@ luxury travel memory field note, transparent watercolor and fine ink sketch, war
 
 ## 强制避免
 
-Avoid anime, cartoon, children’s book sweetness, kawaii, photorealism, photo filter, full-page wet watercolor wash, oil painting, acrylic impasto, dense background, detailed face rendering, fantasy additions, invented people, generic travel icons, scrapbook stickers, torn-paper craft collage, 3D, cyberpunk, neon, glossy digital gradients, fake text, letters, numbers, logos, inset photo, borders, watermark, split-screen.
+Avoid anime, cartoon, children’s book sweetness, kawaii, photorealistic lower rendering, photo filter, full-panel wet watercolor wash, oil painting, acrylic impasto, dense background, detailed face rendering, fantasy additions, invented people, generic travel icons, scrapbook stickers, torn-paper craft collage, 3D, cyberpunk, neon, glossy digital gradients, unrequested fake text, fake logos, excessive inset photos, accidental borders, watermark, multiple lower scenes.
 
 最重要的规则：像在旅途中把“最值得记住的一瞬”画进档案页。保留主体与方向，舍弃摄影噪音；让线稿、水彩和纸张共同表达记忆，而不是复制照片。

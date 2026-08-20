@@ -1,6 +1,6 @@
 # 建筑拼贴 × 丝网印刷 × 设计图风格档案
 
-把当前照片作为唯一主体参考，生成一张独立横向 3:2 的下半区艺术素材。只输出无文字素材；不要生成上半照片、双联版式、标题、字母、数字、标志、边框、水印或多图拼贴。
+本档案是完整 3:4 双联海报的下半风格模块。只在下半区域以建筑拼贴、丝网印刷和设计图语言重构上半照片中的同一场景，不改变上半照片。
 
 ## 场景摘要
 
@@ -24,7 +24,7 @@
 
 整体留白充足、安静、具有建筑展览版面感。主体可占画面中部至中下部，允许建筑和地形在横向上延伸，但边缘应开放。
 
-在下半素材的左上方保留约 22% 宽、15% 高的安静象牙色区域，用于代码标题和编号；右上方保留较小区域用于年份。重要建筑、强对比色块和设计图线条不要穿过这些区域。
+在下半区域的左上方保留约 22% 宽、15% 高的安静象牙色区域，用于共享提示词指定的标题和编号；右上方保留较小区域用于年份。重要建筑、强对比色块和设计图线条不要穿过这些区域。
 
 下端部必须有优雅的“向下渐融余韵”：少量竖长照片碎片、半透明条带、网点或细线向下延伸并逐渐消散。保持细腻，避免数码故障、像素拉伸或赛博 glitch。
 
@@ -46,6 +46,6 @@ luxury architectural collage poster, screen-print landscape, architectural drawi
 
 ## 强制避免
 
-Avoid simple geometric landscape illustration, generic mountain logo, flat house icons, boring vector poster, full photographic filter, complete photorealism, childish collage, scrapbook craft look, cartoon, anime, 3D render, cyberpunk, glitch art, pixel stretching, neon, glossy gradients, excessive text, random logos, cheap template, generic stock landscape, dense unreadable blueprint, unrelated objects, borders, split-screen, multiple scenes.
+Avoid simple geometric landscape illustration, generic mountain logo, flat house icons, boring vector poster, full photographic filter, complete photorealism, childish collage, scrapbook craft look, cartoon, anime, 3D render, cyberpunk, glitch art, pixel stretching, neon, glossy gradients, excessive text, random logos, cheap template, generic stock landscape, dense unreadable blueprint, unrelated objects, accidental borders, multiple lower scenes.
 
 最重要的规则：下半区必须同时看见“真实地域素材的残片”“建筑制图的秩序”和“丝网印刷的层叠”，三者缺一不可；同时保持安静留白和主体识别。

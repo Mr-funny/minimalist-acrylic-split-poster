@@ -1,6 +1,6 @@
-# 下半幅极简东方留白丙烯插画提示词
+# 极简东方留白丙烯下半风格模块
 
-把当前输入照片作为唯一视觉参考。先理解照片，再重新绘制一张独立的横向 3:2 插画。只输出插画本身；不要生成上下双联、原照片、海报文字、标题、边框、分割线、版式标记或多图拼贴。若后续需要代码文字页脚，在底部预留约 15–18% 的安静米白纸张，不放重要主体。
+本档案是完整 3:4 双联海报的下半风格模块。把上半照片中的同一主体重新绘制为东方留白丙烯插画，只影响下半区域，不改变上半照片。为共享提示词指定的少量标题和元信息保留安静纸面。
 
 ## 当前照片的场景摘要
 
@@ -48,6 +48,6 @@ minimalist East Asian acrylic illustration, modern Asian storybook illustration,
 
 ## 强制避免
 
-Avoid photorealism, photo filter, watercolor wash dominating the image, transparent watercolor look, oil painting, impasto oil paint, hyper-detailed illustration, detailed faces, detailed foliage, individual leaves, individual grass blades, dense forest rendering, complete environmental rendering, full background coverage, edge-to-edge painting, filling every empty area, sharp outlines, clean vector shapes, smooth digital gradients, airbrush rendering, glossy surfaces, cinematic photography, HDR, lens blur, dramatic photographic lighting, 3D rendering, anime style, excessive detail, oversaturated colors, typography, borders, split-screen layouts, collage.
+Avoid photorealistic lower illustration, photo filter, watercolor wash dominating the image, transparent watercolor look, oil painting, impasto oil paint, hyper-detailed illustration, detailed faces, detailed foliage, individual leaves, individual grass blades, dense forest rendering, complete environmental rendering, full lower-panel coverage, edge-to-edge painting, filling every empty area, sharp outlines, clean vector shapes, smooth digital gradients, airbrush rendering, glossy surfaces, cinematic photography, HDR, lens blur, dramatic photographic lighting, 3D rendering, anime style, excessive detail, oversaturated colors, excessive typography, accidental borders, multiple lower scenes.
 
 最重要的规则：不要把参考照片中的每一样东西都画出来。理解照片之后，只重新绘制维持主体、场景与故事所需的最少视觉信息；主动删除细节、主动制造留白，让纸张本身成为画面的一部分。

@@ -1,6 +1,6 @@
 # 建筑旅行钢笔水彩速写风格档案
 
-把当前照片作为唯一主体参考，生成一张独立横向 3:2 的无文字下半区艺术素材。不要生成上半照片、标题、手写单词、年份、标志、边框或水印；所有可读文字由代码添加。
+本档案是完整 3:4 双联海报的下半风格模块。只在下半区域把上半照片中的同一主体重构为建筑旅行钢笔水彩速写，不改变上半照片。
 
 ## 场景摘要
 
@@ -16,7 +16,7 @@
 
 ## 构图与文字安全区
 
-主体可占画面中央和中下部，构图完整但不铺满。右上方保留约 30% 宽、22% 高的浅色安静区域，供代码写入手写体地点、地区和年份。左下方保留少量纸张，用于材质或光线观察词。
+主体可占下半区域中央和中下部，构图完整但不铺满。右上方保留约 30% 宽、22% 高的浅色安静区域，供共享提示词指定的手写体地点、地区和年份。左下方保留少量纸张，用于材质或光线观察词。
 
 可加入极少量无文字图形笔记：一个空心圆点、一两个浅色矩形、简化结构小草图、短横线或色块样本。它们应像旅行绘图页的设计元素，不能变成抽象海报主角。
 
@@ -40,6 +40,6 @@ architectural travel sketchbook, European urban sketch, fine ink perspective dra
 
 ## 强制避免
 
-Avoid photorealistic rendering, photo filter, oil painting, acrylic impasto, anime, cartoon, children’s watercolor, kawaii travel journal, dense black outlines, complete CAD blueprint, 3D visualization, glossy surfaces, cyberpunk, neon, generic landmark replacement, invented architecture, incorrect perspective, excessive decorations, scrapbook stickers, fake handwriting, readable text, letters, numbers, logos, watermark, border, split-screen.
+Avoid photorealistic lower rendering, photo filter, oil painting, acrylic impasto, anime, cartoon, children’s watercolor, kawaii travel journal, dense black outlines, complete CAD blueprint, 3D visualization, glossy surfaces, cyberpunk, neon, generic landmark replacement, invented architecture, incorrect perspective, excessive decorations, scrapbook stickers, fake or unrequested handwriting, fake logos, watermark, accidental border, multiple lower scenes.
 
 最重要的规则：准确保留原主体的结构和透视，用钢笔线与透明水彩把它变成一页真实、成熟的旅行观察记录，而不是把任何照片套成同一个地标模板。
