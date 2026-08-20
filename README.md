@@ -11,7 +11,7 @@ The upper photograph is never redrawn by ImageGen. When its aspect ratio does no
 ## Included styles
 
 1. East Asian negative-space acrylic storybook
-2. Minimal geometric architectural editorial
+2. `LAKESIDE TERRAIN` premium minimalist geometric editorial abstraction
 3. Architectural collage, screen print, and blueprint
 4. Travel-memory watercolor field note
 5. Architectural travel sketchbook
@@ -68,4 +68,3 @@ The output defaults to 1536×2048 with an exact 50:50 split.
 ## License
 
 MIT. See [LICENSE](LICENSE).
-

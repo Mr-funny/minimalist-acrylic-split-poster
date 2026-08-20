@@ -1,6 +1,6 @@
 ---
 name: minimalist-acrylic-split-poster
-description: "Convert every supplied reference photo into its own premium 3:4 split editorial poster: the upper half preserves and lightly grades the original photograph, while the lower half is a style-controlled reinterpretation with accurate code-rendered titles and metadata. Support switchable profiles such as East Asian negative-space acrylic, geometric architectural abstraction, architectural collage with screen-print and blueprint details, travel-memory watercolor field notes, European architectural travel sketchbooks, naive retro hand-drawn editorial illustration, art-exhibition graphics, and user-defined custom styles. Use for requests mentioning 上原图下重绘、多风格海报、极简抽象、建筑拼贴、丝网印刷、旅行手记、记忆档案、水彩线稿、钢笔建筑速写、稚拙插画、复古手绘、包豪斯、儿童绘本、时尚速写、粉蜡笔、旧套印、手写标题、建筑海报、艺术展览视觉、东方丙烯、海报文字、3:4 竖版、每张单独输出或不拼图. Use ImageGen only for the lower artwork and bundled code for the exact layout, source-photo inset, film grain, and typography."
+description: "Convert every supplied reference photo into its own premium 3:4 split editorial poster: the upper half preserves and lightly grades the original photograph, while the lower half is a style-controlled reinterpretation with accurate code-rendered titles and metadata. Support switchable profiles such as LAKESIDE TERRAIN minimalist geometric editorial abstraction, East Asian negative-space acrylic, architectural collage with screen-print and blueprint details, travel-memory watercolor field notes, European architectural travel sketchbooks, naive retro hand-drawn editorial illustration, art-exhibition graphics, and user-defined custom styles. Use for requests mentioning LAKESIDE TERRAIN、上原图下重绘、多风格海报、高级极简几何、扁平色块、细线构成、大面积留白、极简抽象、建筑拼贴、丝网印刷、旅行手记、记忆档案、水彩线稿、钢笔建筑速写、稚拙插画、复古手绘、包豪斯、儿童绘本、时尚速写、粉蜡笔、旧套印、手写标题、建筑海报、艺术展览视觉、东方丙烯、海报文字、3:4 竖版、每张单独输出或不拼图. Use ImageGen only for the lower artwork and bundled code for the exact layout, source-photo inset, film grain, and typography."
 ---
 
 # 通用双联编辑海报
@@ -25,9 +25,9 @@ description: "Convert every supplied reference photo into its own premium 3:4 sp
 
 用户要求东方留白、纸本丙烯、绘本、干笔、诗意自然场景时，完整读取 [references/illustration-prompt.md](references/illustration-prompt.md)。
 
-### B. 几何建筑编辑海报
+### B. LAKESIDE TERRAIN 高级极简几何编辑
 
-用户要求几何抽象、扁平色块、细线构成、抽象圆环、大面积留白、主体居中、建筑海报、艺术展览或高级品牌视觉时，完整读取 [references/geometric-architectural-prompt.md](references/geometric-architectural-prompt.md)。此档案只控制下半区，不把上半原图规则写入 ImageGen 提示词。
+用户提到 `LAKESIDE TERRAIN`，或要求高级极简几何、可识别的抽象主体、扁平色块、细线构成、大面积留白、建筑海报或高级文化视觉时，完整读取 [references/geometric-architectural-prompt.md](references/geometric-architectural-prompt.md)。此档案只控制下半区；色彩、辅助几何和文字位置应根据原照适配，不固定为粉色叠层、冷灰蓝景观、镜像碎片或某一种版式。不把上半原图规则写入 ImageGen 提示词。
 
 ### C. 建筑拼贴丝网印刷
 
@@ -112,7 +112,22 @@ python3 scripts/compose_split_poster.py \
 
 脚本会创建精确 3:4 画布、严格 50/50 分区、轻调上半原照、等比适配两张图片，并在下半区内部保留默认 18% 的文字页脚。省略 `--title` 可输出无文字版本；用 `--footer-ratio 0.16` 至 `0.24` 调整页脚。
 
-建筑拼贴丝网印刷档案使用：
+LAKESIDE TERRAIN 高级极简几何编辑档案使用：
+
+```bash
+python3 scripts/compose_split_poster.py \
+  --top /absolute/path/to/original.jpg \
+  --bottom /absolute/path/to/minimal-geometric-editorial.png \
+  --output /absolute/path/to/poster.png \
+  --title "LAKESIDE TERRAIN" \
+  --left-meta "2026" \
+  --right-meta "STUDY 01" \
+  --top-grain 1
+```
+
+默认使用 `footer-center`；若下半构图在左上和右上有明确安全留白，也可使用 `--type-layout panel-top-left`。不要为了迁就文字强制改变主体识别关系。
+
+建筑拼贴丝网印刷档案沿用 `panel-top-left` 布局，但使用与 `LAKESIDE TERRAIN` 不同的标题，例如：
 
 ```bash
 python3 scripts/compose_split_poster.py \
@@ -120,13 +135,13 @@ python3 scripts/compose_split_poster.py \
   --bottom /absolute/path/to/collage-artwork.png \
   --output /absolute/path/to/poster.png \
   --type-layout panel-top-left \
-  --title "LAKESIDE TERRAIN" \
+  --title "REGIONAL LAYERS" \
   --left-meta "No. 03" \
   --right-meta "2026" \
   --top-grain 2
 ```
 
-`--top-grain` 接受 0–8；豪华建筑杂志风格通常使用 1–2，避免明显噪点。
+`--top-grain` 接受 0–8；高级杂志摄影通常使用 1–2，避免明显噪点。
 
 旅行记忆手记档案使用：
 
@@ -194,7 +209,7 @@ python3 scripts/compose_split_poster.py \
 ## 资源
 
 - [references/illustration-prompt.md](references/illustration-prompt.md)：东方留白纸本丙烯风格档案。
-- [references/geometric-architectural-prompt.md](references/geometric-architectural-prompt.md)：几何建筑与艺术展览海报风格档案。
+- [references/geometric-architectural-prompt.md](references/geometric-architectural-prompt.md)：LAKESIDE TERRAIN 高级极简几何编辑与艺术展览海报风格档案。
 - [references/architectural-collage-screenprint-prompt.md](references/architectural-collage-screenprint-prompt.md)：建筑拼贴、丝网印刷与设计图风格档案。
 - [references/travel-memory-field-note-prompt.md](references/travel-memory-field-note-prompt.md)：旅行记忆、水彩线稿与档案手记风格档案。
 - [references/architectural-travel-sketchbook-prompt.md](references/architectural-travel-sketchbook-prompt.md)：建筑旅行钢笔水彩与手写观察风格档案。
