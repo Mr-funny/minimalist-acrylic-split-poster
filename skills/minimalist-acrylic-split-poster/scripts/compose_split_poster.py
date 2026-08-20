@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Compose one original photo and one styled artwork into a strict 3:4 poster.
 
-The top half preserves the complete original image over a soft, blurred edge extension.
+The top half preserves the complete original image without stretching or cropping.
+By default, any unused space is quiet paper color rather than a blurred photo clone.
 The bottom half contains the illustration and, optionally, an editorial typography footer.
 FFmpeg performs all pixel processing so the script has no third-party Python dependency.
 """
@@ -58,6 +59,15 @@ def parse_args() -> argparse.Namespace:
         help=(
             "Typography system: centered footer, panel top-left, field note, "
             "sketchbook, or naive editorial"
+        ),
+    )
+    parser.add_argument(
+        "--top-fit",
+        choices=("contain-paper", "blur-extend"),
+        default="contain-paper",
+        help=(
+            "Upper-photo fitting: preserve the complete photo over paper color "
+            "(default), or use the legacy blurred edge extension"
         ),
     )
     parser.add_argument(
@@ -188,21 +198,30 @@ def main() -> int:
     )
     art_height = half_height - footer_height
 
-    # Keep the original photo intact in the foreground. Only the background extension is
-    # enlarged/cropped/blurred, which avoids stretching or discarding the photographed subject.
+    # Keep the original photo intact. The default leaves unused area as paper color;
+    # the legacy blur mode remains available only when explicitly requested.
     if args.type_layout == "field-note":
-        filters = "[0:v]split=3[top_bg_src][top_fg_src][inset_src];"
+        filters = "[0:v]split=2[top_fg_src][inset_src];"
     else:
-        filters = "[0:v]split=2[top_bg_src][top_fg_src];"
+        filters = "[0:v]null[top_fg_src];"
 
-    filters += (
-        f"[top_bg_src]scale={width}:{half_height}:force_original_aspect_ratio=increase,"
-        f"crop={width}:{half_height},gblur=sigma=36,"
-        "eq=contrast=1.025:brightness=0.004:saturation=0.96[top_bg];"
-        f"[top_fg_src]scale={width}:{half_height}:force_original_aspect_ratio=decrease,"
-        "eq=contrast=1.025:brightness=0.004:saturation=0.96[top_fg];"
-        "[top_bg][top_fg]overlay=(W-w)/2:(H-h)/2:format=auto,setsar=1[top_base];"
-    )
+    if args.top_fit == "blur-extend":
+        filters += (
+            f"[top_fg_src]split=2[top_bg_src][top_contain_src];"
+            f"[top_bg_src]scale={width}:{half_height}:force_original_aspect_ratio=increase,"
+            f"crop={width}:{half_height},gblur=sigma=36,"
+            "eq=contrast=1.025:brightness=0.004:saturation=0.96[top_bg];"
+            f"[top_contain_src]scale={width}:{half_height}:force_original_aspect_ratio=decrease,"
+            "eq=contrast=1.025:brightness=0.004:saturation=0.96[top_fg];"
+            "[top_bg][top_fg]overlay=(W-w)/2:(H-h)/2:format=auto,setsar=1[top_base];"
+        )
+    else:
+        filters += (
+            f"color=c=0x{PAPER_COLOR}:s={width}x{half_height}[top_paper];"
+            f"[top_fg_src]scale={width}:{half_height}:force_original_aspect_ratio=decrease,"
+            "eq=contrast=1.025:brightness=0.004:saturation=0.96,setsar=1[top_fg];"
+            "[top_paper][top_fg]overlay=(W-w)/2:(H-h)/2:format=auto,setsar=1[top_base];"
+        )
 
     if args.top_grain:
         filters += f"[top_base]noise=alls={args.top_grain}:allf=u[top];"

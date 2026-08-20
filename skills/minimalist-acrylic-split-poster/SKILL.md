@@ -11,7 +11,7 @@ description: "Convert every supplied reference photo into its own premium 3:4 sp
 
 - 一张照片对应一张海报。禁止多图拼贴、九宫格或把多个场景放在同一张图。
 - 默认画布 1536×2048，上下各为 1536×1024。
-- 上半区使用原始照片本身，只做轻微杂志摄影调色；不重绘、不换主体、不拉伸。
+- 上半区使用原始照片本身，只做轻微杂志摄影调色；不重绘、不换主体、不拉伸、不强制裁切。默认完整等比居中，比例不匹配时以米白纸色留白，不用模糊照片副本补边。
 - 下半区保持主体身份、数量、姿态、动作、关键结构、相对位置、空间方向和场景含义。
 - ImageGen 只生成无文字的下半艺术素材。标题、年份、编号与细线由代码绘制，避免乱码。
 - 用 `scripts/compose_split_poster.py` 锁定尺寸、50/50 分区、原图适配、文字和逐张导出。
@@ -27,7 +27,7 @@ description: "Convert every supplied reference photo into its own premium 3:4 sp
 
 ### B. LAKESIDE TERRAIN 高级极简几何编辑
 
-用户提到 `LAKESIDE TERRAIN`，或要求高级极简几何、可识别的抽象主体、扁平色块、细线构成、大面积留白、建筑海报或高级文化视觉时，完整读取 [references/geometric-architectural-prompt.md](references/geometric-architectural-prompt.md)。此档案只控制下半区；色彩、辅助几何和文字位置应根据原照适配，不固定为粉色叠层、冷灰蓝景观、镜像碎片或某一种版式。不把上半原图规则写入 ImageGen 提示词。
+用户提到 `LAKESIDE TERRAIN`，或要求高级极简几何、可识别的抽象主体、扁平色块、细线构成、大面积留白、建筑海报或高级文化视觉时，完整读取 [references/geometric-architectural-prompt.md](references/geometric-architectural-prompt.md)。此档案强调建筑原型研究、语义重设计与结构诗意，不是照片轮廓矢量化；色彩、辅助几何和文字位置应根据原照适配，不固定为粉色叠层、冷灰蓝景观、镜像碎片或某一种版式。此档案只控制下半区，不把上半原图规则写入 ImageGen 提示词。
 
 ### C. 建筑拼贴丝网印刷
 
@@ -114,7 +114,7 @@ python3 scripts/compose_split_poster.py \
   --right-meta "FORM STUDY 02"
 ```
 
-脚本会创建精确 3:4 画布、严格 50/50 分区、轻调上半原照、等比适配两张图片，并在下半区内部保留默认 18% 的文字页脚。省略 `--title` 可输出无文字版本；用 `--footer-ratio 0.16` 至 `0.24` 调整页脚。
+脚本会创建精确 3:4 画布、严格 50/50 分区、轻调上半原照、等比适配两张图片，并在下半区内部保留默认 18% 的文字页脚。上半默认使用 `--top-fit contain-paper`：完整保留照片比例并以纸色填补空余位置；只有用户明确需要时才使用兼容模式 `--top-fit blur-extend`。省略 `--title` 可输出无文字版本；用 `--footer-ratio 0.16` 至 `0.24` 调整页脚。
 
 LAKESIDE TERRAIN 高级极简几何编辑档案使用：
 
@@ -126,6 +126,7 @@ python3 scripts/compose_split_poster.py \
   --title "LAKESIDE TERRAIN" \
   --left-meta "2026" \
   --right-meta "STUDY 01" \
+  --top-fit contain-paper \
   --top-grain 1
 ```
 
@@ -216,7 +217,7 @@ python3 scripts/compose_split_poster.py \
 ### 6. 质量检查
 
 - 成品精确 3:4，分界位于高度 50%。
-- 上半原图主体无形变、替换或过度调色。
+- 上半原图主体无形变、替换、裁切或过度调色；默认补位区域是均匀纸色，不出现模糊副本、镜像延展或复制背景。
 - 下半一眼可识别原主体，但视觉语言明确属于所选风格。
 - 自定义风格的关键特征没有被默认丙烯、水彩或几何元素污染。
 - 标题拼写准确，元信息清晰，不遮挡主体。
