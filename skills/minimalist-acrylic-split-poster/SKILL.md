@@ -1,6 +1,6 @@
 ---
 name: minimalist-acrylic-split-poster
-description: "Transform each supplied reference photo into its own complete premium 3:4 split editorial poster in one ImageGen pass: the upper half preserves the source photograph with high visual fidelity and subtle editorial grading, while the lower half reinterprets the same subject in a selectable art direction with integrated poster typography. Support LAKESIDE TERRAIN geometric architecture, East Asian negative-space acrylic, architectural collage and screen print, travel-memory field notes, architectural watercolor sketchbooks, monochrome etching, naive retro editorial illustration, and custom styles. Use for requests mentioning 上原图下重绘、双联海报、3:4竖版、多风格海报、LAKESIDE TERRAIN、建筑展览海报、东方丙烯、单色版画、旅行手记、复古稚拙插画、每张照片单独输出或不拼图. Default to prompt-native full-poster generation; use deterministic code compositing only when the user explicitly requires pixel-identical source photography or exact typography."
+description: "Transform each supplied reference photo into its own complete premium 3:4 split editorial poster in one ImageGen pass: the upper half preserves the source photograph with high visual fidelity and subtle editorial grading, while the lower half reinterprets the same subject in a selectable art direction with integrated poster typography. Support LAKESIDE TERRAIN geometric architecture, East Asian negative-space acrylic, limited-palette travel relief prints, travel watercolor sticker journals, architectural collage and screen print, travel-memory field notes, architectural watercolor sketchbooks, monochrome etching, naive retro editorial illustration, and custom styles. Use for requests mentioning 上原图下重绘、双联海报、3:4竖版、多风格海报、LAKESIDE TERRAIN、旅行版画、限色丝网印刷、浮雕版画、旅行贴纸手账、水彩贴纸索引、建筑展览海报、东方丙烯、单色版画、旅行手记、复古稚拙插画、每张照片单独输出或不拼图. Default to prompt-native full-poster generation; use deterministic code compositing only when the user explicitly requires pixel-identical source photography or exact typography."
 ---
 
 # 提示词原生双联编辑海报
@@ -41,6 +41,8 @@ description: "Transform each supplied reference photo into its own complete prem
 
 - 东方留白纸本丙烯：读取 [references/illustration-prompt.md](references/illustration-prompt.md)。
 - `LAKESIDE TERRAIN` 高级极简几何与建筑原型研究：读取 [references/geometric-architectural-prompt.md](references/geometric-architectural-prompt.md)。
+- 限色粗颗粒旅行浮雕版画与打字机词条：读取 [references/travel-relief-print-prompt.md](references/travel-relief-print-prompt.md)。
+- 城市水彩主插画、右侧贴纸索引与旅行观察页：读取 [references/travel-sticker-journal-prompt.md](references/travel-sticker-journal-prompt.md)。
 - 建筑拼贴、丝网印刷与设计图：读取 [references/architectural-collage-screenprint-prompt.md](references/architectural-collage-screenprint-prompt.md)。
 - 旅行记忆、水彩线稿与档案手记：读取 [references/travel-memory-field-note-prompt.md](references/travel-memory-field-note-prompt.md)。
 - 建筑旅行钢笔水彩速写：读取 [references/architectural-travel-sketchbook-prompt.md](references/architectural-travel-sketchbook-prompt.md)。
@@ -81,5 +83,7 @@ description: "Transform each supplied reference photo into its own complete prem
 ## 资源
 
 - [references/full-poster-prompt.md](references/full-poster-prompt.md)：完整海报共享骨架和上半照片保真提示词。
+- [references/travel-relief-print-prompt.md](references/travel-relief-print-prompt.md)：限色粗颗粒旅行浮雕版画风格。
+- [references/travel-sticker-journal-prompt.md](references/travel-sticker-journal-prompt.md)：旅行水彩主插画与贴纸视觉索引风格。
 - `references/*-prompt.md`：可插拔下半风格模块。
 - `scripts/compose_split_poster.py`：仅供像素级原图和准确文字等确定性需求使用。

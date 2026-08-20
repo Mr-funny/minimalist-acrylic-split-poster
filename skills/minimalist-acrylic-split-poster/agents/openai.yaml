@@ -1,4 +1,4 @@
 interface:
   display_name: "多风格双联编辑海报"
-  short_description: "用提示词一次生成上照片、下艺术重构的3:4海报"
+  short_description: "用提示词生成多风格的上照片、下艺术重构海报"
   default_prompt: "使用 $minimalist-acrylic-split-poster，以提示词原生方式将每张照片分别制作成上半高保真原照、下半风格化重构并带少量编辑文字的 3:4 竖版海报。"
