@@ -16,6 +16,7 @@ The upper photograph is never redrawn by ImageGen. When its aspect ratio does no
 4. Travel-memory watercolor field note
 5. Architectural travel sketchbook
 6. Naive retro hand-drawn editorial illustration
+7. Monochrome architectural etching, stipple, and indigo blueprint print
 
 Each style is isolated in its own prompt reference so visual languages are not mixed accidentally.
 

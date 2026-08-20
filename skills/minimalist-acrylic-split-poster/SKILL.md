@@ -1,6 +1,6 @@
 ---
 name: minimalist-acrylic-split-poster
-description: "Convert every supplied reference photo into its own premium 3:4 split editorial poster: the upper half preserves and lightly grades the original photograph, while the lower half is a style-controlled reinterpretation with accurate code-rendered titles and metadata. Support switchable profiles such as LAKESIDE TERRAIN minimalist geometric editorial abstraction, East Asian negative-space acrylic, architectural collage with screen-print and blueprint details, travel-memory watercolor field notes, European architectural travel sketchbooks, naive retro hand-drawn editorial illustration, art-exhibition graphics, and user-defined custom styles. Use for requests mentioning LAKESIDE TERRAIN、上原图下重绘、多风格海报、高级极简几何、扁平色块、细线构成、大面积留白、极简抽象、建筑拼贴、丝网印刷、旅行手记、记忆档案、水彩线稿、钢笔建筑速写、稚拙插画、复古手绘、包豪斯、儿童绘本、时尚速写、粉蜡笔、旧套印、手写标题、建筑海报、艺术展览视觉、东方丙烯、海报文字、3:4 竖版、每张单独输出或不拼图. Use ImageGen only for the lower artwork and bundled code for the exact layout, source-photo inset, film grain, and typography."
+description: "Convert every supplied reference photo into its own premium 3:4 split editorial poster: the upper half preserves and lightly grades the original photograph, while the lower half is a style-controlled reinterpretation with accurate code-rendered titles and metadata. Support switchable profiles such as LAKESIDE TERRAIN minimalist geometric editorial abstraction, East Asian negative-space acrylic, architectural collage with screen-print and blueprint details, travel-memory watercolor field notes, European architectural travel sketchbooks, monochrome architectural etching and stipple prints, naive retro hand-drawn editorial illustration, and user-defined custom styles. Use for requests mentioning LAKESIDE TERRAIN、上原图下重绘、多风格海报、高级极简几何、扁平色块、细线构成、大面积留白、极简抽象、建筑拼贴、丝网印刷、旅行手记、记忆档案、水彩线稿、钢笔建筑速写、单色建筑蚀刻、蓝图版画、点描线刻、靛蓝线稿、铜版画、稚拙插画、复古手绘、包豪斯、儿童绘本、时尚速写、粉蜡笔、旧套印、手写标题、建筑海报、艺术展览视觉、东方丙烯、海报文字、3:4 竖版、每张单独输出或不拼图. Use ImageGen only for the lower artwork and bundled code for the exact layout, source-photo inset, film grain, and typography."
 ---
 
 # 通用双联编辑海报
@@ -45,7 +45,11 @@ description: "Convert every supplied reference photo into its own premium 3:4 sp
 
 用户要求稚拙手绘、复古编辑插画、包豪斯构成、成熟儿童绘本、时尚速写、水彩水粉彩铅粉蜡笔、幽默隐喻或旧印刷套色时，完整读取 [references/naive-retro-editorial-prompt.md](references/naive-retro-editorial-prompt.md)。此档案使用 `naive-editorial` 代码布局，以手写主标题、轻微错位叠色和温和辅助字体准确呈现文字。
 
-### G. 用户自定义风格
+### G. 单色建筑蚀刻版画
+
+用户要求单色靛蓝或墨色建筑线刻、铜版画、蚀刻版画、点描、蓝图线稿、古典雕版、细密排线、图像在象牙色纸张中渐隐或 `STILL WATERS` 类型海报时，完整读取 [references/monochrome-architectural-etching-prompt.md](references/monochrome-architectural-etching-prompt.md)。此档案默认使用 `panel-top-left` 文字布局，与钢笔水彩旅行速写分开。
+
+### H. 用户自定义风格
 
 用户提供新风格时，把描述规范化成一张临时“风格卡”，至少明确：
 
@@ -195,6 +199,20 @@ python3 scripts/compose_split_poster.py \
 
 `naive-editorial` 默认使用系统 Marker Felt 手写字体，并以低透明度暖色偏移层模拟旧印刷套色。可用 `--naive-font /absolute/path/to/font.ttf` 替换。
 
+单色建筑蚀刻版画档案使用：
+
+```bash
+python3 scripts/compose_split_poster.py \
+  --top /absolute/path/to/original.jpg \
+  --bottom /absolute/path/to/monochrome-etching.png \
+  --output /absolute/path/to/poster.png \
+  --type-layout panel-top-left \
+  --title "STILL WATERS" \
+  --left-meta "OBSERVATION 01" \
+  --right-meta "2026" \
+  --top-grain 1
+```
+
 ### 6. 质量检查
 
 - 成品精确 3:4，分界位于高度 50%。
@@ -214,4 +232,5 @@ python3 scripts/compose_split_poster.py \
 - [references/travel-memory-field-note-prompt.md](references/travel-memory-field-note-prompt.md)：旅行记忆、水彩线稿与档案手记风格档案。
 - [references/architectural-travel-sketchbook-prompt.md](references/architectural-travel-sketchbook-prompt.md)：建筑旅行钢笔水彩与手写观察风格档案。
 - [references/naive-retro-editorial-prompt.md](references/naive-retro-editorial-prompt.md)：复古稚拙手绘、包豪斯构成与时尚编辑插画风格档案。
+- [references/monochrome-architectural-etching-prompt.md](references/monochrome-architectural-etching-prompt.md)：单色建筑蚀刻、点描线刻、靛蓝版画与渐隐纸面风格档案。
 - `scripts/compose_split_poster.py`：通用版式、原图适配、准确文字和逐图导出脚本。
