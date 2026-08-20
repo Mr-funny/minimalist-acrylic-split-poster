@@ -1,0 +1,4 @@
+interface:
+  display_name: "多风格双联编辑海报"
+  short_description: "逐张生成上原照、下多风格重绘与准确文字的3:4海报"
+  default_prompt: "使用 $minimalist-acrylic-split-poster 按我指定的视觉风格，将每张照片分别制作成上原照、下风格化重绘并带编辑设计文字的 3:4 竖版海报。"
